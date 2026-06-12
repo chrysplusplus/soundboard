@@ -1,0 +1,145 @@
+[page]
+title             = "Pting Who Soundboard"
+btnSize           = "150px"
+containerMaxWidth = "1500px"
+fontFamily        = "\"Noto Sans\", sans-serif, \"Noto Color Emoji\""
+heading1          = "Pting Who: Episode 3"
+
+[cssRoot.colors]
+azureRadiance = "#0B74E5FF"
+thunderbird   = "#D72A18"
+
+[cssRoot.aliases]
+textBlue = "azureRadiance"
+textRed  = "thunderbird"
+
+[css.textColors]
+blue = "textBlue"
+red  = "textRed"
+
+[[buttons]]
+onclick   = "pause()"
+svg       = "#btn-red"
+text      = "Stop"
+textColor = "red"
+
+[[buttons]]
+dataSrc   = "sounds/01 ripper fart.wav"
+img       = "img/01 farty pting.png"
+onclick   = "togglePlay(this)"
+svg       = "#btn-blue"
+text      = "Ripper Fart"
+textColor = "blue"
+
+[[buttons]]
+dataSrc   = "sounds/02 TURDIS.wav"
+onclick   = "togglePlay(this)"
+svg       = "#btn-blue"
+img       = "img/02 TURDIS.png"
+textColor = "blue"
+text      = "TURDIS lands"
+
+[[buttons]]
+dataSrc   = "sounds/03 My Pal Foot Foot 2.mp3"
+onclick   = "togglePlay(this)"
+svg       = "#btn-blue"
+img       = "img/03 Shaggs.png"
+textColor = "blue"
+text      = "The Shaggs"
+
+[[buttons]]
+dataSrc   = "sounds/04 Magnum Crunch.wav"
+onclick   = "togglePlay(this)"
+svg       = "#btn-blue"
+img       = "img/04 Magnum.png"
+textColor = "blue"
+text      = "Magnum Crunch"
+
+[[buttons]]
+dataSrc   = "sounds/05 ptingtone.wav"
+onclick   = "togglePlay(this)"
+svg       = "#btn-dark-gray"
+img       = "img/05 Ptingphone.png"
+textColor = "blue"
+text      = "Ptingtone"
+
+[[buttons]]
+dataSrc   = "sounds/06 AOL.mp3"
+onclick   = "togglePlay(this)"
+svg       = "#btn-dark-gray"
+img       = "img/06 AOL.png"
+textColor = "blue"
+text      = "AOL"
+
+[[buttons]]
+dataSrc   = "sounds/07 Musical Sting.mp3"
+onclick   = "togglePlay(this)"
+svg       = "#btn-green"
+img       = "img/07 suddenly.png"
+textColor = "blue"
+text      = "Suddenly..."
+
+[[buttons]]
+dataSrc   = "sounds/08 wavedash.mp3"
+onclick   = "togglePlay(this)"
+svg       = "#btn-indigo"
+img       = "img/08 wavedash 2.png"
+textColor = "blue"
+text      = "wavedash"
+
+[[buttons]]
+dataSrc   = "sounds/09 dog squeaq.wav"
+onclick   = "togglePlay(this)"
+svg       = "#btn-light-gray"
+img       = "img/09 dog toy 2.png"
+textColor = "blue"
+text      = "Dog Squeaq"
+
+[[buttons]]
+dataSrc   = "sounds/10 Shirelles 2.mp3"
+onclick   = "togglePlay(this)"
+svg       = "#btn-orange"
+img       = "img/10 shirelles.png"
+textColor = "blue"
+text      = "Shirelles"
+
+[[buttons]]
+dataSrc   = "sounds/12 Key Item.mp3"
+onclick   = "togglePlay(this)"
+svg       = "#btn-red"
+img       = "img/12 key item.png"
+textColor = "blue"
+text      = "Key Item Get"
+
+[[buttons]]
+dataSrc   = "sounds/13 Enter the Elbow.mp3"
+onclick   = "togglePlay(this)"
+svg       = "#btn-yellow"
+img       = "img/13 idris elbow.png"
+textColor = "blue"
+text      = "Idris Elbow"
+
+[[buttons]]
+dataSrc   = "sounds/14 1 TURDIS Takes Off.wav"
+onclick   = "togglePlay(this)"
+svg       = "#btn-blue"
+img       = "img/02 TURDIS.png"
+textColor = "blue"
+text      = "TURDIS takes off"
+
+[[buttons]]
+dataSrc   = "sounds/14 2 TURDIS Lands Sped Up.wav"
+onclick   = "togglePlay(this)"
+svg       = "#btn-blue"
+img       = "img/02 TURDIS.png"
+textColor = "blue"
+text      = "TURDIS lands sped-up"
+
+[[buttons]]
+dataSrc   = "sounds/15 Crazy Frog.mp3"
+onclick   = "togglePlay(this)"
+svg       = "#btn-dark-gray"
+img       = "img/14 naughties dance party.png"
+textColor = "blue"
+text      = "Dance Number"
+
