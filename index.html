@@ -1,0 +1,429 @@
+<!DOCTYPE HTML>
+<head>
+  <title>Pting Who Soundboard</title>
+  <style>
+    :root {
+      --azure-radiance-color: #0B74E5FF;
+      --thunderbird-color: #D72A18;
+      --text-blue: var(--azure-radiance-color);
+      --text-red: var(--thunderbird-color);
+      --btn-size: 150px;
+      --container-max-width: 1500px;
+    }
+
+    html,
+    body {
+      font-family: "Noto Sans", sans-serif, "Noto Color Emoji";
+    }
+
+    .p-0 {
+      padding: 0
+    }
+
+    .hand {
+      cursor: pointer
+    }
+
+    .position-relative {
+      position: relative !important
+    }
+
+    .container {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: var(--container-max-width);
+    }
+
+    main {
+      text-align: center;
+      margin: 40px auto;
+    }
+
+    .soundboard {
+      margin: 35px 0;
+      padding: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px 32px;
+      justify-content: center;
+    }
+
+    .sound-item {
+      width: var(--btn-size);
+      word-wrap: break-word;
+    }
+
+    .sound-btn {
+      background-color: #fff0;
+      border: none;
+    }
+
+    .sound-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .sound-button-wrapper:active {
+      transform: scaleY(.8)
+    }
+
+    .sound-button-wrapper svg {
+      height: var(--btn-size);
+      width: var(--btn-size);
+    }
+
+    .sound-btn-img {
+      position: absolute;
+      top: 44%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 65%;
+      height: 65%;
+      object-fit: cover;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .sound-button-text {
+      margin-top: 4px;
+      word-break: break-word;
+      min-height: 42px;
+      overflow: hidden;
+    }
+
+    .text-blue {
+      color: var(--text-blue);
+    }
+
+    .text-red {
+      color: var(--text-red);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Pting Who: Episode 3</h1>
+    <div class="container">
+      <div class="soundboard">
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" onclick="pause()">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-red"></use>
+            </svg>
+          </button>
+          <p class="sound-button-text text-red">Stop</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/01 ripper fart.wav" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-blue"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/01 farty pting.png">
+          </button>
+          <p class="sound-button-text text-blue">Ripper Fart</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/02 TURDIS.wav" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-blue"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/02 TURDIS.png">
+          </button>
+          <p class="sound-button-text text-blue">TURDIS lands</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/03 My Pal Foot Foot 2.mp3" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-blue"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/03 Shaggs.png">
+          </button>
+          <p class="sound-button-text text-blue">The Shaggs</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/04 Magnum Crunch.wav" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-blue"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/04 Magnum.png">
+          </button>
+          <p class="sound-button-text text-blue">Magnum Crunch</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/05 ptingtone.wav" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-dark-gray"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/05 Ptingphone.png">
+          </button>
+          <p class="sound-button-text text-blue">Ptingtone</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/06 AOL.mp3" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-dark-gray"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/06 AOL.png">
+          </button>
+          <p class="sound-button-text text-blue">AOL</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/07 Musical Sting.mp3" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-green"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/07 suddenly.png">
+          </button>
+          <p class="sound-button-text text-blue">Suddenly...</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/08 wavedash.mp3" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-indigo"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/08 wavedash 2.png">
+          </button>
+          <p class="sound-button-text text-blue">wavedash</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/09 dog squeaq.wav" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-light-gray"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/09 dog toy 2.png">
+          </button>
+          <p class="sound-button-text text-blue">Dog Squeaq</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/10 Shirelles 2.mp3" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-orange"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/10 shirelles.png">
+          </button>
+          <p class="sound-button-text text-blue">Shirelles</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/12 Key Item.mp3" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-red"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/12 key item.png">
+          </button>
+          <p class="sound-button-text text-blue">Key Item Get</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/13 Enter the Elbow.mp3" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-yellow"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/13 idris elbow.png">
+          </button>
+          <p class="sound-button-text text-blue">Idris Elbow</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/14 1 TURDIS Takes Off.wav" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-blue"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/02 TURDIS.png">
+          </button>
+          <p class="sound-button-text text-blue">TURDIS takes off</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/14 2 TURDIS Lands Sped Up.wav" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-blue"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/02 TURDIS.png">
+          </button>
+          <p class="sound-button-text text-blue">TURDIS lands sped-up</p>
+        </div>
+
+        <div class="sound-item">
+          <button class="sound-button-wrapper hand position-relative sound-btn hand p-0" data-src="sounds/15 Crazy Frog.mp3" onclick="togglePlay(this)">
+            <svg class="sound-base-icon">
+              <use class="sound-icon" xlink:href="#btn-dark-gray"></use>
+            </svg>
+            <img class="sound-btn-img" src="img/14 naughties dance party.png">
+          </button>
+          <p class="sound-button-text text-blue">Dance Number</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="btn-blue" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="90" fill="#444" stroke="#222" stroke-width="4"></circle> <circle cx="100" cy="90" r="80" fill="#42b6eb" stroke="black" stroke-width="4"></circle>
+      <circle cx="100" cy="80" r="75" fill="lightskyblue" opacity="0.6"></circle>
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="8" result="coloredBlur"></feGaussianBlur>
+          <feMerge>
+            <feMergeNode in="coloredBlur"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+      </defs>
+      <circle cx="100" cy="90" r="60" fill="#168dc2" opacity="0.3" filter="url(#glow)"></circle>
+    </symbol>
+    <symbol id="btn-dark-gray" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="90" fill="#444" stroke="#222" stroke-width="4"></circle>
+      <circle cx="100" cy="90" r="80" fill="#555" stroke="black" stroke-width="4"></circle>
+      <circle cx="100" cy="80" r="75" fill="#777" opacity="0.6"></circle>
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="8" result="coloredBlur"></feGaussianBlur>
+          <feMerge>
+            <feMergeNode in="coloredBlur"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+      </defs>
+      <circle cx="100" cy="90" r="60" fill="#555" opacity="0.3" filter="url(#glow)"></circle>
+    </symbol>
+    <symbol id="btn-green" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="90" fill="#444" stroke="#222" stroke-width="4"></circle>
+      <circle cx="100" cy="90" r="80" fill="green" stroke="black" stroke-width="4"></circle>
+      <circle cx="100" cy="80" r="75" fill="limegreen" opacity="0.6"></circle>
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="8" result="coloredBlur"></feGaussianBlur>
+          <feMerge>
+            <feMergeNode in="coloredBlur"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+      </defs>
+      <circle cx="100" cy="90" r="60" fill="green" opacity="0.3" filter="url(#glow)"></circle>
+    </symbol>
+    <symbol id="btn-indigo" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="90" fill="#444" stroke="#222" stroke-width="4"></circle>
+      <circle cx="100" cy="90" r="80" fill="indigo" stroke="black" stroke-width="4"></circle>
+      <circle cx="100" cy="80" r="75" fill="#ac7ccf" opacity="0.6"></circle>
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="8" result="coloredBlur"></feGaussianBlur>
+          <feMerge>
+            <feMergeNode in="coloredBlur"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+      </defs>
+      <circle cx="100" cy="90" r="60" fill="indigo" opacity="0.3" filter="url(#glow)"></circle>
+    </symbol>
+    <symbol id="btn-light-gray" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="90" fill="#666" stroke="#444" stroke-width="4"></circle>
+      <circle cx="100" cy="90" r="80" fill="#D3D3D3" stroke="black" stroke-width="4"></circle>
+      <circle cx="100" cy="80" r="75" fill="#F0F0F0" opacity="0.6"></circle>
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="8" result="coloredBlur"></feGaussianBlur>
+          <feMerge>
+            <feMergeNode in="coloredBlur"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+      </defs>
+      <circle cx="100" cy="90" r="60" fill="#999999" opacity="0.3" filter="url(#glow)"></circle>
+    </symbol>
+    <symbol id="btn-orange" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="90" fill="#444" stroke="#222" stroke-width="4"></circle>
+      <circle cx="100" cy="90" r="80" fill="#ee812b" stroke="black" stroke-width="4"></circle>
+      <circle cx="100" cy="80" r="75" fill="#f7a949" opacity="0.6"></circle>
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="8" result="coloredBlur"></feGaussianBlur>
+          <feMerge>
+            <feMergeNode in="coloredBlur"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+      </defs>
+      <circle cx="100" cy="90" r="60" fill="#c74a0c" opacity="0.3" filter="url(#glow)"></circle>
+    </symbol>
+    <symbol id="btn-pink" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="90" fill="#444" stroke="#222" stroke-width="4"></circle>
+      <circle cx="100" cy="90" r="80" fill="#f54ca7" stroke="black" stroke-width="4"></circle>
+      <circle cx="100" cy="80" r="75" fill="#ff87c8" opacity="0.6"></circle>
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="8" result="coloredBlur"></feGaussianBlur>
+          <feMerge>
+            <feMergeNode in="coloredBlur"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+      </defs>
+      <circle cx="100" cy="90" r="60" fill="#e43995" opacity="0.3" filter="url(#glow)"></circle>
+    </symbol>
+    <symbol id="btn-red" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="90" fill="#666" stroke="#222" stroke-width="4"></circle>
+      <circle cx="100" cy="90" r="80" fill="#cc0505" stroke="black" stroke-width="4"></circle>
+      <circle cx="100" cy="80" r="75" fill="#ff4545" opacity="0.6"></circle>
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="8" result="coloredBlur"></feGaussianBlur>
+          <feMerge>
+            <feMergeNode in="coloredBlur"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+      </defs>
+      <circle cx="100" cy="90" r="60" fill="#a50000" opacity="0.3" filter="url(#glow)" <="" symbol="">
+        <symbol id="btn-yellow" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="90" fill="#666" stroke="#444" stroke-width="4"></circle>
+          <circle cx="100" cy="90" r="80" fill="#f6c418" stroke="black" stroke-width="4"></circle>
+          <circle cx="100" cy="80" r="75" fill="#fff46a" opacity="0.6"></circle>
+          <defs>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="8" result="coloredBlur"></feGaussianBlur>
+              <feMerge>
+                <feMergeNode in="coloredBlur"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+              </feMerge>
+            </filter>
+          </defs>
+          <circle cx="100" cy="90" r="60" fill="#bfa615" opacity="0.3" filter="url(#glow)" <="" symbol="">
+          </circle>
+        </symbol>
+      </circle>
+    </symbol>
+  </svg>
+
+  <script>
+    let audioPlayer = new Audio;
+
+    function togglePlay(e) {
+      const data_src = e.getAttribute("data-src")
+      if (data_src) {
+        audioPlayer.src = data_src
+        audioPlayer.play()
+      }
+    }
+
+    function pause() {
+      audioPlayer.pause()
+    }
+  </script>
+
+</body>
+
