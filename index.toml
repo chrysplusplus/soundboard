@@ -1,9 +1,9 @@
 [page]
-title             = "Pting Who Soundboard"
+title             = "Presidential Soundboard"
 btnSize           = "150px"
 containerMaxWidth = "1500px"
 fontFamily        = "\"Noto Sans\", sans-serif, \"Noto Color Emoji\""
-heading1          = "Pting Who: Episode 3"
+heading1          = "Presidential Soundboard for `Pting Who: Episode 3`"
 
 [cssRoot.colors]
 azureRadiance = "#0B74E5FF"
